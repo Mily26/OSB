@@ -1,0 +1,34 @@
+<wsdl:definitions
+     name="ABMCategorias"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/tpFinalV2/tpFinalV2/ABMCategorias"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/tpFinalV2/tpFinalV2/ABMCategorias"
+     xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
+     xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/ABMCategorias"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+  <plt:partnerLinkType name="ABMCategorias_plt" >
+    <plt:role name="ABMCategorias_role" >
+      <plt:portType name="tns:ABMCategorias_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+    <wsdl:types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/ABMCategorias" schemaLocation="ABMCategorias_table.xsd" />
+      </schema>
+    </wsdl:types>
+    <wsdl:message name="CategoriasFCollection_msg">
+        <wsdl:part name="CategoriasFCollection" element="top:CategoriasFCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="ABMCategorias_ptt">
+        <wsdl:operation name="insert">
+            <wsdl:input message="tns:CategoriasFCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="update">
+            <wsdl:input message="tns:CategoriasFCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="delete">
+            <wsdl:input message="tns:CategoriasFCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

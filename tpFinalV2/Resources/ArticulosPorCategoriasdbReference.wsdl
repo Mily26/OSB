@@ -1,0 +1,40 @@
+<wsdl:definitions
+     name="ArticulosPorCategoriasdbReference"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/tpFinalV2/tpFinalV2/ArticulosPorCategoriasdbReference"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/tpFinalV2/tpFinalV2/ArticulosPorCategoriasdbReference"
+     xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
+     xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+  <plt:partnerLinkType name="ArticulosPorCategoriasdbReference_plt" >
+    <plt:role name="ArticulosPorCategoriasdbReference_role" >
+      <plt:portType name="tns:ArticulosPorCategoriasdbReference_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+  <plt:partnerLinkType name="ArticulosPorCategoriasdbReference_plt" >
+    <plt:role name="ArticulosPorCategoriasdbReference_role" >
+      <plt:portType name="tns:ArticulosPorCategoriasdbReference_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+    <wsdl:types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference" schemaLocation="ArticulosPorCategoriasdbReference.xsd" />
+      </schema>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference" schemaLocation="ArticulosPorCategoriasdbReference.xsd" />
+      </schema>
+    </wsdl:types>
+    <wsdl:message name="ArticulosPorCategoriasdbReferenceInput_msg">
+        <wsdl:part name="ArticulosPorCategoriasdbReferenceInput_msg" element="db:ArticulosPorCategoriasdbReferenceInput"/>
+    </wsdl:message>
+    <wsdl:message name="ArticulosPorCategoriasdbReferenceOutputCollection_msg">
+        <wsdl:part name="ArticulosPorCategoriasdbReferenceOutputCollection" element="db:ArticulosPorCategoriasdbReferenceOutputCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="ArticulosPorCategoriasdbReference_ptt">
+        <wsdl:operation name="ArticulosPorCategoriasdbReference">
+            <wsdl:input message="tns:ArticulosPorCategoriasdbReferenceInput_msg"/>
+            <wsdl:output message="tns:ArticulosPorCategoriasdbReferenceOutputCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

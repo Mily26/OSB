@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/ABMArticulos" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ABMArticulos" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="ArticulosFCollection" type="ArticulosFCollection"/>
+   <xs:complexType name="ArticulosFCollection">
+      <xs:sequence>
+         <xs:element name="ArticulosF" type="ArticulosF" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ArticulosF">
+      <xs:sequence>
+         <xs:element name="id" type="xs:integer"/>
+         <xs:element name="descripcion" type="string50" minOccurs="0" nillable="true"/>
+         <xs:element name="precio" type="xs:integer" minOccurs="0" nillable="true"/>
+         <xs:element name="idCategoria" type="xs:integer" minOccurs="0" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="string50">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="50"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

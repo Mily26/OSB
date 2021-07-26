@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="ArticulosPorCategoriasdbReferenceInput" type="ArticulosPorCategoriasdbReferenceInput"/>
+   <xs:complexType name="ArticulosPorCategoriasdbReferenceInput">
+      <xs:sequence>
+         <xs:element name="PARAMETRO" type="xs:string" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="ArticulosPorCategoriasdbReferenceOutputCollection" type="ArticulosPorCategoriasdbReferenceOutputCollection"/>
+   <xs:complexType name="ArticulosPorCategoriasdbReferenceOutputCollection">
+      <xs:sequence>
+         <xs:element name="ArticulosPorCategoriasdbReferenceOutput" type="ArticulosPorCategoriasdbReferenceOutput" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ArticulosPorCategoriasdbReferenceOutput">
+      <xs:sequence>
+         <xs:element name="ID" type="xs:integer" nillable="true"/>
+         <xs:element name="DESCRIPCION" type="xs:string" nillable="true"/>
+         <xs:element name="PRECIO" type="xs:integer" nillable="true"/>
+         <xs:element name="ID_CATEGORIA" type="xs:integer" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

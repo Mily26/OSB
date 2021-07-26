@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<application xmlns:soa="http://www.oracle.com/soa/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference" xmlns="http://wadl.dev.java.net/2009/02">
+   <doc title="ArticulosPorCategoriaRestService">RestService</doc>
+   <grammars>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/tpFinalV2/tpFinalV2/ArticulosPorCategoriasdbReference" xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference" schemaLocation="ArticulosPorCategoriasdbReference.xsd"/>
+      </schema>
+   </grammars>
+   <resources>
+      <resource path="/articulos">
+         <method name="GET" soa:wsdlOperation="ArticulosPorCategoriasdbReference">
+            <request soa:paramElement="pns:ArticulosPorCategoriasdbReferenceInput" xmlns:pns="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference">
+               <param name="PARAMETRO" style="query" soa:expression="$msg.ArticulosPorCategoriasdbReferenceInput_msg/db:PARAMETRO" type="xsd:string"/>
+            </request>
+            <response status="200">
+               <representation mediaType="application/json" element="cns:ArticulosPorCategoriasdbReferenceOutputCollection" xmlns:cns="http://xmlns.oracle.com/pcbpel/adapter/db/ArticulosPorCategoriasdbReference"/>
+            </response>
+         </method>
+      </resource>
+   </resources>
+</application>

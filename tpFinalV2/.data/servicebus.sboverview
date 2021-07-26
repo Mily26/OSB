@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:composite xmlns:ns="http://xmlns.oracle.com/sca/1.0">
+    <ns:reference>
+        <ns:interface src="BusinessService:tpFinalV2/ArticulosPorCategoriasdbReference"/>
+    </ns:reference>
+    <ns:reference>
+        <ns:interface src="BusinessService:tpFinalV2/WriteFileService"/>
+    </ns:reference>
+    <ns:reference>
+        <ns:interface src="BusinessService:tpFinalV2/ABMArticulos"/>
+    </ns:reference>
+    <ns:reference>
+        <ns:interface src="BusinessService:tpFinalV2/ABMCategorias"/>
+    </ns:reference>
+</ns:composite>
